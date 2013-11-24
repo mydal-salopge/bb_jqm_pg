@@ -1,0 +1,99 @@
+img {
+  display: block;
+}
+.ui-page .ui-content .grid-cell {
+  margin: 0 9px 9px 0;
+}
+.ui-page .ui-content .empty-cell {
+  padding: 7px 7px 0 7px;
+  width: 80px;
+  height: 85px;
+  float: left;
+}
+.ui-page .ui-content .fixed-logo {
+  padding: 0 9px 0 9px;
+  width: 76px;
+  height: 92px;
+  position: fixed;
+}
+.ui-page .ui-content .fixed-logo img {
+  width: 76px;
+  height: 76px;
+}
+.ui-page .ui-content .fixed-logo .id-name {
+  font-size: 9px;
+  color: #4b5479;
+  height: 16px;
+  line-height: 16px;
+  vertical-align: middle;
+  text-align: center;
+  overflow: hidden;
+  white-space: no-wrap;
+  text-overflow: clip;
+}
+.ui-page .ui-content .post-summ-cell {
+  padding: 7px 7px 0 7px;
+  width: 80px;
+  height: 85px;
+  float: left;
+  border-width: 1px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.ui-page .ui-content .post-summ-cell .image-thumb {
+  width: 80px;
+  height: 67px;
+  display: block;
+}
+.ui-page .ui-content .post-summ-cell .title {
+  width: 80px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 8px;
+  overflow: hidden;
+  white-space: no-wrap;
+  text-overflow: ellipsis;
+}
+.ui-page .ui-footer .footer-upper {
+  padding: 7px 9px 0 9px;
+  height: 23px;
+}
+.ui-page .ui-footer .footer-upper .footer-menus {
+  width: 93px;
+  left: 23px;
+  float: left;
+}
+.ui-page .ui-footer .footer-upper .footer-menus .footer-menu-btn {
+  float: left;
+}
+.ui-page .ui-footer .footer-upper .footer-menus .footer-menu-btn img {
+  width: 23px;
+  height: 23px;
+}
+.ui-page .ui-footer .footer-upper .footer-menus .left-margin-12 {
+  margin-left: 12px;
+}
+.ui-page .ui-footer .footer-upper .ui-input-text {
+  margin: 0px 0px 0px 9px;
+  padding: 0;
+  width: 197px;
+  height: 23px;
+  float: left;
+}
+.ui-page .ui-footer .footer-upper .ui-input-text .footer-search {
+  margin: 0;
+  padding: 0 16px 0 1px;
+  width: 178px;
+  height: 21px;
+  font-size: 11px;
+  border: 1px solid #000000;
+  background: url(../img/icon_search.png) right no-repeat;
+  background-size: 15px 15px;
+}
+.ui-page .ui-footer .footer-lower {
+  margin-top: 7px;
+  width: 320px;
+  height: 8px;
+  float: left;
+}
