@@ -1,3 +1,3 @@
 #!/bin/bash
-platforms/ios/cordova/build
+cordova build ios
 platforms/ios/cordova/run

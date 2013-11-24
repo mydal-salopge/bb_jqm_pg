@@ -1,5 +1,4 @@
 tpl = {
-
     // Hash of preloaded templates for the app
     templates:{},
 
@@ -7,7 +6,6 @@ tpl = {
     // This implementation should be changed in a production environment. All the template files should be
     // concatenated in a single file.
     loadTemplates:function (names, callback) {
-
         var that = this;
 
         var loadTemplate = function (index) {
@@ -22,7 +20,7 @@ tpl = {
                     callback();
                 }
             });
-        }
+        };
 
         loadTemplate(0);
     },
@@ -31,5 +29,4 @@ tpl = {
     get:function (name) {
         return this.templates[name];
     }
-
 };

@@ -26,10 +26,13 @@
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
+    <feature name="Console">
+        <param name="ios-package" value="CDVLogger" />
+    </feature>
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="true" />
     <author email="dev@callback.apache.org" href="http://cordova.io">
         Apache Cordova Team
     </author>
     <content src="index.html" />
-    <preference name="fullscreen" value="true" />
-    <preference name="webviewbounce" value="true" />
 </widget>

@@ -1,22 +1,28 @@
 var AppRouter = Backbone.Router.extend({
     routes:{
-        "":"grid",
+        "":"landing"
     },
 
     initialize: function () {
-        console.log('initialize');
         this.firstPage = true;
+        this.latestposts = new PostSummaryCollection();
+        console.log(this.latestposts);
+        console.log('initialized');
     },
 
-    grid: function() {
-       this.changePage(new PostGridPage({model: this.searchResults})); 
+    landing: function() {
+        console.log('landing');
+        new LandingPage({model: this.latestposts});
+        this.changePage(new LandingPage({model: this.latestposts}));
     },
 
     changePage: function (page) {
         console.log('changePage');
-
         $(page.el).attr('data-role', 'page');
         page.render();
+
+        console.log('page.el: ' + page.el.innerHTML);
+
         $('body').append($(page.el));
         var transition = $.mobile.defaultPageTransition;
         // We don't want to slide the first page
@@ -30,11 +36,12 @@ var AppRouter = Backbone.Router.extend({
 });
 
 $(document).ready(function () {
-    console.log('starts app');
-
-    tpl.loadTemplates(['landing', 'post-grid-item'],
-        function () {
-            app = new AppRouter();
-            Backbone.history.start();
-        });
+    //TODO: remove setTimeout for release   
+    setTimeout(function() {
+        tpl.loadTemplates(['landing', 'post-list-item'],
+            function () {
+                app = new AppRouter();
+                Backbone.history.start();
+            });
+    }, 1000);
 });
