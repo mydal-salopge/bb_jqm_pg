@@ -1,6 +1,28 @@
 <div data-role="content">
-    <div id="post-grid"></div>
+    <div class="fixed-logo grid-cell">
+        <img src="img/dal_logo.png">
+        <div class="id-name">아이디 이름</div>
+    </div>
+    <div id="post-grid">
+        <div class="grid-cell empty-cell">
+        </div>
+    </div>
 </div>
 
-<div data-role="footer" data-position="fixed">
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="footer">
+    <div class="footer-upper">
+        <div class="footer-menus">
+            <a class="footer-menu-btn btn-reply">
+                <img src="img/btn_reply.png">
+            </a>
+            <a class="footer-menu-btn left-margin-12 btn-subject">
+                <img src="img/btn_subject.png">
+            </a>
+            <a class="footer-menu-btn left-margin-12 btn-upload">
+                <img src="img/btn_upload.png">
+            </a>
+        </div>
+        <input type="text" name="search" class="footer-search" value="" placeholder="검색하기"/>
+    </div>
+    <img class="footer-lower" src="img/footer_color_bar.png">
 </div>

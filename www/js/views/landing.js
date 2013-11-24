@@ -16,7 +16,7 @@ window.LandingPage = Backbone.View.extend({
 window.PostGridView = Backbone.View.extend({
     render:function (eventName) {
         console.log('PostGridView render');
-        $(this.el).empty();
+        //$(this.el).empty();
         //TODO: insert the Dal logo at the left-top cell
         _.each(this.model.models, function (post_summ, idx) {
             $(this.el).append(new PostGridItemView({model:post_summ, index:idx}).render().el);
@@ -40,7 +40,7 @@ window.PostGridItemView = Backbone.View.extend({
     render:function (eventName) {
         console.log('PostGridItemView render');
         console.log(this.model);
-        this.$el.attr('class', 'post-summ-box');
+        this.$el.attr('class', 'post-summ-cell grid-cell');
         $(this.el).html(this.template(this.model.toJSON()));
         console.log('el: ' + this.el.innerHTML);
         return this;

@@ -17,7 +17,7 @@ window.PostSummaryCollection = Backbone.Collection.extend({
     initialize: function() {
         console.log('PostSummaryCollection initialize');
         this.offset = 0;
-        this.limit = 11;
+        this.limit = 17;
         this.fetchMorePosts();
     },
 
@@ -25,36 +25,27 @@ window.PostSummaryCollection = Backbone.Collection.extend({
         console.log('fetchMorePosts');
         console.log(this.offset);
         console.log(this.limit);
-        
-        this.add([
-            {
-                image_url: 'img/dal_test_img1.png',
-                bg_color: '#000000',
-                title: 'TestImage1',
-                category: 'testimg',
-                post_id: 1
-            },
-            {
-                image_url: 'img/dal_test_img2.png',
-                bg_color: '#000000',
-                title: 'TestImage2',
-                category: 'testimg',
-                post_id: 2
-            },
-            {
-                image_url: ' ',
-                bg_color: '#000000',
-                title: 'TestColor',
-                category: 'testColor',
-                post_id: 1
-            },
-            {
-                image_url: 'img/dal_logo.png',
-                bg_color: '#000000',
-                title: 'DalLogo',
-                category: 'logo',
-                post_id: 1
-            }
-        ]);
+        var i,
+            images = ['', 'img/dal_test_img1.png', 'img/dal_test_img2.png'],
+            titles = ['글 내용의 머릿자들이 이 사진 밑에', '사진이 없는 경우 색박스', '생각의 지도'],
+            categories = ['first', 'second', 'third'],
+            colors = ['#13d394', '#c37b62', '#9bc7dd'],
+            rnd_idx,
+            data = [];
+
+        for (i = 0; i < this.limit; i +=1 ) {
+            img_idx = Math.floor(Math.random() * 3);
+            color_idx = Math.floor(Math.random() * 3);
+            title_idx = Math.floor(Math.random() * 3);
+            category_idx = Math.floor(Math.random() * 3);
+            data.push({
+                image_url: images[img_idx],
+                bg_color: colors[color_idx],
+                title: titles[title_idx],
+                category: categories[category_idx],
+                post_id: i
+            });
+        }
+        this.add(data);
     }
 });
