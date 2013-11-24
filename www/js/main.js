@@ -38,7 +38,7 @@ var AppRouter = Backbone.Router.extend({
 $(document).ready(function () {
     //TODO: remove setTimeout for release   
     setTimeout(function() {
-        tpl.loadTemplates(['landing', 'post-list-item'],
+        tpl.loadTemplates(['landing', 'post-grid-item'],
             function () {
                 app = new AppRouter();
                 Backbone.history.start();
